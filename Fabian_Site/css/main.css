@@ -1,0 +1,589 @@
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  color: #333;
+  font-family: 'Raleway', sans-serif;
+  /* font-size: 1em; */
+  margin: 0;
+}
+
+
+  h1,h2,h3,h4,h5{
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: .1em;
+    color: #607d8b;
+  }
+
+  h1{
+    font-size: 3.438em;
+    letter-spacing: .1em;
+    font-family: 'Playfair Display', serif;
+
+  }
+
+  h2{
+    font-size:2.125em;
+    font-family: 'Playfair Display', serif;
+  }
+
+  h3{
+    font-size: 1.313em;
+    font-weight: 400;
+  }
+
+  h4{
+    font-size: 1.25em;
+    letter-spacing: .2em;
+    font-weight: 400;
+  }
+
+  h5{
+    font-size: 1.313em;
+    letter-spacing: .1em;
+    line-height: 1.5em;
+    color: white;
+    font-weight: 400;
+  }
+
+  h6{
+    font-size: .3em;
+    letter-spacing: .1em;
+    color: #DEDEDE;
+  }
+
+  p{
+    /* target % context = em*/
+    font-size: .813rem;
+    /*top right bottom left */
+    line-height: 1.75;
+    /*boreder: 3px solid red;
+    background: gray;*/
+   }
+
+   a{
+     color: #ecf0f1;
+     text-decoration: none;
+     transition: color .5s ease;
+     /*what we're transitioning, speed, path*/
+   }
+
+   a:hover{
+     color: #8e44ad;
+   }
+
+   a:link{
+     color: black;
+   }
+
+   a:visited{
+     color: black;
+   }
+
+   a:hover{
+     color: pink;
+   }
+
+   /* Start Test Hamburger Menu */
+   .menu, .menu-bg, .menu-burger {
+     position: fixed;
+     width: 50px;
+     height: 50px;
+     font-size: 30px;
+     text-align: center;
+     border-radius: 100%;
+     right: 0.45em;
+     top: 0.5em;
+
+   }
+
+   .menu-bg {
+     background: rgb(26, 188, 156);
+     pointer-events: none;
+     transition: .3s;
+     right: 1.3em;
+     top: 1.18em;
+     transform: translate3d(50%, -50%, 0);
+     transform-origin: center center;
+     z-index: 10;
+   }
+   .menu-bg.fs {
+     background: rgba(26, 188, 156, 0.9);
+     transform: translate3d(50%, -50%, 0);
+     width: 300vw;
+     height: 300vw;
+   }
+
+   .menu-burger {
+     color: #fff;
+     padding-top: 3px;
+     -webkit-user-select: none;
+     cursor: pointer;
+     transition: .4s;
+     transform-origin: center;
+     z-index: 100;
+   }
+   .menu-burger.fs {
+     transform: rotate(-180deg) translateY(10px);
+   }
+
+   .menu-items {
+     position: fixed;
+     font-weight: bold;
+     font-size: 40px;
+     letter-spacing: 10px;
+     color: white;
+     width: 100%;
+     text-align: center;
+     opacity: 0;
+     transition: .4s;
+     margin-top: 100px;
+     transform: translateY(-200%);
+     pointer-events: none;
+     z-index: 10;
+   }
+   .menu-items div {
+     transition: 1s;
+     opacity: 0;
+     margin-top: 0px;
+   }
+   .menu-items.fs {
+     transform: translateY(0);
+     pointer-events: auto;
+     opacity: 1;
+   }
+   .menu-items.fs div {
+     opacity: 1;
+     margin-top: 75px;
+   }
+   /* End Test Hamburger Menu */
+
+
+/* target = <div id="header"> */
+header{
+  background: #eee8e0;
+  height: 250px;
+  position: relative;
+}
+
+.header-intro{
+  padding-top: 1em;
+  padding-left: 2em;
+}
+
+.header-intro p{
+  padding-top: 0;
+  padding-left: 0;
+}
+
+.header-intro h1{
+  padding-top: 0;
+  padding-left: 1em;
+  margin-top: 0;
+}
+
+
+
+/* Beginning of Projects */
+
+section{
+  width: 100%;
+  float: left;
+}
+
+#projects{
+  width: 100%;
+  float: left;
+}
+
+.project1{
+  height: 400px;
+  background-color: aqua;
+}
+
+.description{
+  padding-top: 180px;
+}
+
+.description p{
+  padding: .5em 3em;
+  margin: 0.1em 0em;
+}
+
+.description h3{
+  padding: .5em 1.8em;
+  margin: 0.1em 0em;
+}
+
+
+.project2{
+  height: 400px;
+  background-color: pink;
+  cursor: pointer;
+}
+
+.project2 p{
+  padding: .5em 3em;
+  margin: 0.1em 0em;
+}
+
+.project2 h3{
+  padding: .5em 1.8em;
+  margin: 0.1em 0em;
+}
+
+
+.project3{
+  height: 400px;
+  background-color: white;
+}
+
+.project3 p{
+  padding: .5em 3em;
+  margin: 0.1em 0em;
+}
+
+.project3 h3{
+  padding: .5em 1.8em;
+  margin: 0.1em 0em;
+}
+
+
+.container img.image{
+width: 100%;
+height: inherit;
+object-fit: cover;
+}
+
+
+#project4-holder {
+position:relative;
+height: 400px;
+}
+#project4-holder .image{
+    transition: opacity 0.5s ease-in-out;
+    margin: 0 auto;
+    text-align: center;
+    background-image: url(http://68.media.tumblr.com/b6eab4ef205e96374d57a0a47ff2b286/tumblr_oeugzzv9fl1rlxg41o1_540.jpg);
+}
+
+#project4-holder .text {
+  opacity: 1;
+}
+#project4-holder .text {
+  position:absolute;
+  top:0;
+  left:0;
+  opacity:1;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+
+.project4{
+  height: 400px;
+  background-color: pink;
+  position: relative;
+}
+
+.project4 p{
+  padding: .5em 3em;
+  margin: 0.1em 0em;
+}
+
+.project4 h3{
+  padding: .5em 1.8em;
+  margin: 0.1em 0em;
+}
+
+.project5{
+  height: 400px;
+  background-color: white;
+}
+
+.project5 p{
+  padding: .5em 3em;
+  margin: 0.1em 0em;
+}
+
+.project5 h3{
+  padding: .5em 1.8em;
+  margin: 0.1em 0em;
+}
+
+.description5{
+  margin-top: -228px;
+}
+
+.description5:hover{
+  visibility: hidden;
+  margin-top: -228px;
+}
+
+
+
+
+
+
+/* End of Projects */
+
+#about{
+  padding: .5em 2.4em;
+  margin: 0.1em 0em;
+}
+
+.aboutme{
+  padding: .5em 2.4em;
+  margin: 0.1em 0em;
+}
+
+.aboutme h2{
+  padding-bottom: 50px;
+}
+
+.aboutme h5{
+  color: #8fa4ae;
+}
+
+.containerskill{
+  text-align: center;
+}
+
+.skill{
+  padding: .5em 2.4em;
+  margin: 0.1em 0em;
+  text-align: center;
+}
+
+
+/* Beginning of Individual Projects */
+
+
+#projectbanner{
+  height: auto;
+  background-color: #4990E2;
+  color: white;
+}
+
+.project-intro{
+  padding: 0px 0px 0px 20px;
+  color: white;
+}
+
+.project-intro h3{
+   color: #fff;
+}
+
+.header-description{
+  color: white;
+  padding: 10px 50px 50px 50px;
+}
+
+.header-description h1{
+  color: white;
+}
+
+.header-description h3{
+  color: white;
+  padding-bottom: 20px;
+}
+
+
+
+#projectpage1{
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+}
+
+.container1{
+  width: auto;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.image1{
+  margin: 0 auto;
+  display: block;
+  min-width: 100%;
+  max-width: 100%;
+  width: 100%;
+}
+
+#projectpage2{
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+}
+
+.container2{
+  width: auto;
+  background-color: white;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.image2{
+  margin: 50px auto;
+  display: block;
+  min-width: 100%;
+  max-width: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.blurb{
+  margin: 40px auto;
+  padding: 20px 20px;
+  max-width: 650px;
+}
+
+/*.image1{
+  height: auto;
+  width: auto;
+  background-color: beige;
+  background-image: url(https://deuxhuithuit.com/workspace/uploads/projets/cellules/pop-multi-device-img-en.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}*/
+
+
+
+
+
+
+@media only screen and (min-width: 550px) {
+
+  #projects{
+    width: 100%;
+    float: left;
+  }
+
+  .description{
+    width: : 600px;
+  }
+
+  .project1{
+    width: 50%;
+    Float: left;
+  }
+
+  .project2{
+    width: 50%;
+    Float: left;
+  }
+
+  .project3{
+    width: 100%;
+    Float: left;
+  }
+
+  .project4{
+    width: 50%;
+    Float: left;
+  }
+
+  .project5{
+    width: 50%;
+    Float: left;
+  }
+
+
+  .header-description{
+    color: white;
+    margin: 30px auto;
+    text-align: center;
+    max-width: 650px;
+  }
+
+
+}
+
+
+@media only screen and (min-width: 700px){
+
+.aboutme{
+  padding: 4.5em 9.4em;
+  margin: 0.1em 0em;
+}
+
+.skill{
+    width: 33%;
+    float: left;
+}
+
+
+#project4-holder {
+position:relative;
+height: 400px;
+}
+#project4-holder .image{
+    transition: opacity 0.5s ease-in-out;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#project4-holder .text {
+  opacity: 0;
+}
+#project4-holder .text {
+  position:absolute;
+  top:0;
+  left:0;
+  opacity:0;
+}
+
+#project4-holder:hover .image {
+  opacity:0;
+}
+#project4-holder:hover .text {
+  transition: opacity 0.5s ease-in-out;
+  height: 400px;
+  opacity:1;
+  background-color: white;
+  margin: 0 auto;
+  padding-top: 50px;
+
+}
+
+
+
+#project5-holder {
+position:relative;
+height: 400px;
+}
+#project5-holder .image{
+    transition: opacity 0.5s ease-in-out;
+    margin: 0 auto;
+    padding-top: 50px;
+    text-align: center;
+}
+
+#project5-holder .text {
+  opacity: 0;
+}
+#project5-holder .text {
+  position:absolute;
+  top:0;
+  left:0;
+  opacity:0;
+}
+
+#project5-holder:hover .image {
+  opacity:0;
+}
+#project5-holder:hover .text {
+  transition: opacity 0.5s ease-in-out;
+  height: 400px;
+  opacity:1;
+  background-color: white;
+  margin: 0 auto;
+  padding-top: 50px;
+
+}
+
+
+}
